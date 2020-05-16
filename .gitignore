@@ -27,3 +27,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 .vscode/settings.json
+Assets/Resources/Standard\ Assets/
+Assets/Resources/Standard\ Assets.meta
