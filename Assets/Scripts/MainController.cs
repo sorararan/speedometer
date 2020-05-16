@@ -25,7 +25,7 @@ public class MainController : MonoBehaviour {
 
     void FixedUpdate() {
         if(!is_finished){
-            if (startCount >= 5.0f){
+            if (startCount >= 3.0f){
                 float speed = Mathf.Abs(car.GetComponent<CarController>().CurrentSpeed);
                 if (speed < minSpeed || speed > maxSpeed) {
                     count += Time.deltaTime;
@@ -39,7 +39,7 @@ public class MainController : MonoBehaviour {
                 }
             } else {
                 startCount += Time.deltaTime;
-                timeText.text = (5.0f - startCount).ToString("f1") + "秒";
+                timeText.text = (3.0f - startCount).ToString("f1") + "秒";
             }
         }
 
@@ -51,5 +51,6 @@ public class MainController : MonoBehaviour {
 
     public void finish(bool is_clear) {
         textController.setEndText(is_clear);
+        is_finished = true;
     }
 }
